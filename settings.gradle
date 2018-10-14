@@ -2,4 +2,6 @@ rootProject.name = 'workshop'
 
 includeBuild './frontend'
 includeBuild './domain'
+includeBuild './orderService'
+includeBuild './reportService'
 
