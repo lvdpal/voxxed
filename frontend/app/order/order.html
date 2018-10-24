@@ -1,0 +1,18 @@
+<div ng-controller="OrderCtrl">
+	<H1>Voxxed ticketmaster</H1>
+	<div>The last order was: {{orderId}}</div>
+	<!--<table border='1'>-->
+		<!--<tr ng-repeat="row in deckOfCards">-->
+		  <!--<td ng-repeat="card in row" ng-click="selectCard(card)" id="card{{card.id}}"-->
+			  <!--width="360px" height="100px" align="center">-->
+			<!--<p ng-bind-html="drawCard(card) | to_trusted" style="margin:0px;"></p>-->
+		  <!--</td>-->
+		<!--</tr>-->
+	<!--</table>-->
+	<!--<span>validSet: {{validSet}}</span><br>-->
+	<!--<span>score: {{score}}</span><br>-->
+	<!--<span>highscore: {{highScore}}</span> <br>-->
+	<div>
+		<button ng-click="startOrder()" class="md-raised md-button md-ink-ripple">START</button>
+	</div>
+</div>
