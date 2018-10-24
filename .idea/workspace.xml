@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c4bcdd-8170-487f-88ba-b46b752432c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hello/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello/src/main/java/hello/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello/src/main/java/hello/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hello/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/src/main/java/hello/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello/src/main/java/hello/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/src/main/java/hello/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello/src/main/java/hello/HelloController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -193,6 +192,10 @@
           <entry key="PLAIN_TEXT" value="42" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -253,8 +256,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hello/src/main/java/hello/HelloApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#235#236#0" expanded="true" />
@@ -299,6 +302,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -1714,7 +1718,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540406413701" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540407000764" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1905,7 +1909,7 @@
       <workItem from="1539519299033" duration="4605000" />
       <workItem from="1539530404433" duration="881000" />
       <workItem from="1539540361300" duration="2392000" />
-      <workItem from="1540405042601" duration="1199000" />
+      <workItem from="1540405042601" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Hello Spring Boot Application">
       <created>1540406242084</created>
@@ -1914,7 +1918,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540406242084</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Basic Hello Spring Boot Application">
+      <created>1540406437591</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540406437591</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1926,10 +1937,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10020000" />
+    <option name="totallyTimeSpent" value="10704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20590208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2174,8 +2186,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hello/src/main/java/hello/HelloApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#235#236#0" expanded="true" />
