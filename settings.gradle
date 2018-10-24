@@ -4,4 +4,5 @@ includeBuild './frontend'
 includeBuild './domain'
 includeBuild './orderService'
 includeBuild './reportService'
+include 'hello'
 
