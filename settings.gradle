@@ -5,4 +5,6 @@ includeBuild './domain'
 includeBuild './orderService'
 includeBuild './reportService'
 include 'hello'
+include 'eventService'
+include 'sellerService'
 

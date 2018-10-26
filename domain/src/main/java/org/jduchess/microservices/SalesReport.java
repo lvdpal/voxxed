@@ -1,8 +1,15 @@
 package org.jduchess.microservices;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity
 public class SalesReport {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private Seller seller;
     private Event event;
@@ -10,6 +17,13 @@ public class SalesReport {
     private BigDecimal totalRevenue;
 
     public SalesReport(){}
+
+    public SalesReport(Seller seller, Event event, int nrOfTicketsSold, BigDecimal totalRevenue) {
+        this.seller = seller;
+        this.event = event;
+        this.nrOfTicketsSold = nrOfTicketsSold;
+        this.totalRevenue = totalRevenue;
+    }
 
     public int getId() {
         return id;

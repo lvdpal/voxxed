@@ -1,9 +1,14 @@
 package org.jduchess.microservices;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Ticket {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private Buyer buyer;
     private Seller seller;

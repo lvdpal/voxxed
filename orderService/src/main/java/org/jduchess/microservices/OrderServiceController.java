@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/order")
 @ConfigurationProperties(prefix="orderService")
-
-public class OrderServiceController {
+ public class OrderServiceController {
     private String saying;
 
     @CrossOrigin

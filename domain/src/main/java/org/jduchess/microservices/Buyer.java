@@ -1,6 +1,12 @@
 package org.jduchess.microservices;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Buyer {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private int name;
     private Address address;
