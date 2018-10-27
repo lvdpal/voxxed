@@ -4,7 +4,6 @@
     <list default="true" id="d3c4bcdd-8170-487f-88ba-b46b752432c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -173,15 +172,15 @@
         <counts>
           <entry key="dummy" value="18" />
           <entry key="gradle" value="7" />
-          <entry key="java" value="670" />
-          <entry key="txt" value="322" />
+          <entry key="java" value="822" />
+          <entry key="txt" value="358" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="7" />
-          <entry key="JAVA" value="670" />
-          <entry key="PLAIN_TEXT" value="340" />
+          <entry key="JAVA" value="822" />
+          <entry key="PLAIN_TEXT" value="376" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -234,16 +233,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="-31">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
                 <element signature="e#376#377#0" expanded="true" />
                 <element signature="e#407#408#0" expanded="true" />
                 <element signature="e#556#557#0" expanded="true" />
                 <element signature="e#587#588#0" expanded="true" />
                 <element signature="e#556#557#0" expanded="true" />
                 <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#1225#1226#0" expanded="true" />
+                <element signature="e#1256#1257#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2593,7 +2596,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540657262828" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540668548739" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -2980,7 +2983,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540647106077</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ticketservice wat methodes gegeven">
+      <created>1540657607189</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1540657607189</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2992,12 +3002,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23255000" />
+    <option name="totallyTimeSpent" value="24287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27095908" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21327968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -3080,7 +3090,8 @@
     <MESSAGE value="Entities hebben nu ook de Entity annotatie" />
     <MESSAGE value="Dependency op domain miste nog" />
     <MESSAGE value="domain project naar eigen package verplaatst zodat we juiste imports konden doen.&#10;nog wel de juiste dependencies leggen in de gradle." />
-    <option name="LAST_COMMIT_MESSAGE" value="domain project naar eigen package verplaatst zodat we juiste imports konden doen.&#10;nog wel de juiste dependencies leggen in de gradle." />
+    <MESSAGE value="ticketservice wat methodes gegeven" />
+    <option name="LAST_COMMIT_MESSAGE" value="ticketservice wat methodes gegeven" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/settings.gradle" />
@@ -3458,16 +3469,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="-31">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
             <element signature="e#376#377#0" expanded="true" />
             <element signature="e#407#408#0" expanded="true" />
             <element signature="e#556#557#0" expanded="true" />
             <element signature="e#587#588#0" expanded="true" />
             <element signature="e#556#557#0" expanded="true" />
             <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
           </folding>
         </state>
       </provider>
