@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c4bcdd-8170-487f-88ba-b46b752432c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ticketService/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/EventTickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/EventTickets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/SalesReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/SalesReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/TicketType.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/TicketType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eventService/src/main/java/org/jduchess/microservices/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eventService/src/main/java/org/jduchess/microservices/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eventService/src/main/java/org/jduchess/microservices/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/eventService/src/main/java/org/jduchess/microservices/EventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/org/jduchess/microservices/SalesReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/org/jduchess/microservices/SalesReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/org/jduchess/microservices/SalesReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/org/jduchess/microservices/SalesReportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellerService/src/main/java/microservices/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sellerService/src/main/java/org/jduchess/microservices/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellerService/src/main/java/microservices/SellerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sellerService/src/main/java/org/jduchess/microservices/SellerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellerService/src/main/java/microservices/SellerServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sellerService/src/main/java/org/jduchess/microservices/SellerServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -180,28 +160,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="12" />
-          <entry key="java" value="54" />
+          <entry key="java" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="12" />
-          <entry key="JAVA" value="54" />
+          <entry key="JAVA" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
           <entry key="gradle" value="7" />
-          <entry key="java" value="427" />
-          <entry key="txt" value="171" />
+          <entry key="java" value="670" />
+          <entry key="txt" value="322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="7" />
-          <entry key="JAVA" value="427" />
-          <entry key="PLAIN_TEXT" value="189" />
+          <entry key="JAVA" value="670" />
+          <entry key="PLAIN_TEXT" value="340" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -212,7 +192,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -251,11 +231,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            <state relative-caret-position="341">
+              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#587#588#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Ticket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -277,20 +278,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eventService/src/main/java/org/jduchess/microservices/EventServiceApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2372,14 +2361,14 @@
         <option value="$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/TicketType.java" />
         <option value="$PROJECT_DIR$/ticketService/build.gradle" />
         <option value="$PROJECT_DIR$/sellerService/src/main/java/org/jduchess/microservices/SellerController.java" />
-        <option value="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java" />
         <option value="$PROJECT_DIR$/eventService/src/main/java/org/jduchess/microservices/EventController.java" />
         <option value="$PROJECT_DIR$/eventService/src/main/java/org/jduchess/microservices/EventRepository.java" />
         <option value="$PROJECT_DIR$/domain/build.gradle" />
         <option value="$PROJECT_DIR$/reportService/src/main/java/org/jduchess/microservices/SalesReportController.java" />
         <option value="$PROJECT_DIR$/reportService/src/main/java/org/jduchess/microservices/SalesReportRepository.java" />
-        <option value="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java" />
         <option value="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketServiceApplication.java" />
+        <option value="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java" />
+        <option value="$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java" />
       </list>
     </option>
   </component>
@@ -2604,7 +2593,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540647001905" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540657262828" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -2638,7 +2627,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/bower.json</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -2646,30 +2635,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/.bowerrc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/.jshintrc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/.travis.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/app.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/app.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/components/version/interpolate-filter.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/components/version/interpolate-filter_test.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/components/version/version-directive.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/components/version/version-directive_test.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/components/version/version.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/components/version/version_test.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/index-async.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/order/order.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/order/order.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/app/order/order.service.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/bower.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/front-end.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/karma.conf.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/pom.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -2677,8 +2642,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/build.gradle</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/settings.gradle</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -3010,7 +2973,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540636663352</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="domain project naar eigen package verplaatst zodat we juiste imports konden doen.&#10;nog wel de juiste dependencies leggen in de gradle.">
+      <created>1540647106077</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1540647106077</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3022,7 +2992,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21626000" />
+    <option name="totallyTimeSpent" value="23255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -3047,7 +3017,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23481782" side_tool="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3285968" />
@@ -3109,7 +3079,8 @@
     <MESSAGE value="Eerste opzet van de eerste services" />
     <MESSAGE value="Entities hebben nu ook de Entity annotatie" />
     <MESSAGE value="Dependency op domain miste nog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dependency op domain miste nog" />
+    <MESSAGE value="domain project naar eigen package verplaatst zodat we juiste imports konden doen.&#10;nog wel de juiste dependencies leggen in de gradle." />
+    <option name="LAST_COMMIT_MESSAGE" value="domain project naar eigen package verplaatst zodat we juiste imports konden doen.&#10;nog wel de juiste dependencies leggen in de gradle." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/settings.gradle" />
@@ -3371,13 +3342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/SalesReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -3446,23 +3410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sellerService/src/main/java/org/jduchess/microservices/SellerServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -3486,6 +3433,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/org/jduchess/microservices/model/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketService/src/main/java/org/jduchess/microservices/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
