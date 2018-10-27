@@ -7,4 +7,5 @@ includeBuild './reportService'
 include 'hello'
 include 'eventService'
 include 'sellerService'
+include 'ticketService'
 

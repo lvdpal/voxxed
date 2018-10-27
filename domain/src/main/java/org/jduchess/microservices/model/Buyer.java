@@ -1,4 +1,4 @@
-package org.jduchess.microservices;
+package org.jduchess.microservices.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
