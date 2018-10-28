@@ -2,13 +2,13 @@ package org.jduchess.microservices;
 
 import org.jduchess.microservices.model.Event;
 import org.jduchess.microservices.model.Ticket;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.NotNull;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -32,7 +32,10 @@ public class TicketController {
 
     @RequestMapping(value = "/ticketsForEvent", method = RequestMethod.POST)
     public List<Ticket> getTicketsForEvent(@RequestBody Event event) {
-        return ticketRepository.findByEvent(event);
+        if (event.getId()==-1) {
+            return Collections.emptyList();
+        }
+        return ticketRepository.findByEventId(event.getId());
     }
 
     @RequestMapping(value = "/addTickets", method = RequestMethod.POST)

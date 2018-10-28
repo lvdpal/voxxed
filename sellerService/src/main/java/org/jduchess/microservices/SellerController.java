@@ -1,22 +1,33 @@
 package org.jduchess.microservices;
 
 import org.jduchess.microservices.model.Seller;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotNull;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
 public class SellerController {
-    @Autowired
     private SellerRepository sellerRepository;
 
-    public void addSeller(Seller seller) {
+    public SellerController(@NotNull SellerRepository sellerRepository) {
+        this.sellerRepository = sellerRepository;
+    }
+
+    @RequestMapping(value = "/addSeller", method = RequestMethod.POST)
+    public void addSeller(@RequestBody Seller seller) {
         sellerRepository.save(seller);
     }
 
-    public Optional<Seller> getSeller(int id) {
-        return sellerRepository.findById(id);
+    @RequestMapping(value = "/getSeller/{sellerId}", method = RequestMethod.GET)
+    public Optional<Seller> getSeller(@PathVariable("sellerId") int sellerId) {
+        return sellerRepository.findById(sellerId);
+    }
+
+    @RequestMapping(value="/getAllSellers", method = RequestMethod.GET)
+    public List<Seller> getAllSellers() {
+        return (List)sellerRepository.findAll();
     }
 
 }
