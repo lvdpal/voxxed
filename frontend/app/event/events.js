@@ -3,14 +3,20 @@
 angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/event', {
-    templateUrl: 'event/showEvents.html',
-    controller: 'EventCtrl'
-  });
+  $routeProvider
+      .when('/event', {
+        templateUrl: 'event/showEvents.html',
+        controller: 'EventCtrl'
+      })
+      .when('/event/details', {
+        templateUrl: 'event/details.html',
+        controller: 'EventCtrl'
+      });
 }])
 
-.controller('EventCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('EventCtrl', ['$scope', '$http', '$location', 'eventFactory', function($scope, $http, $location, eventFactory) {
 	$scope.events = {};
+	$scope.selectedEvent = eventFactory.get();
 
 	$scope.allEvents = function() {
 		console.log('fetching all events');
@@ -33,13 +39,15 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
                     "locationName": "Ziggo Dome"
                 }
             ];
-
-
             console.log('retrieved events ' + $scope.events);
         }, function (response) {
             console.log('Error: ', response);
         });
     }
 
+    $scope.openDetails = function(event) {
+        $location.path('/event/details');
+        eventFactory.set(event);
+    }
     showEvents();
 }]);

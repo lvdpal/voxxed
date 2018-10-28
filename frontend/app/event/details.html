@@ -1,0 +1,21 @@
+<div ng-controller="EventCtrl">
+    <H1>Voxxed ticketmaster: events</H1>
+
+    <table border='1'>
+        <tr>
+            <td>Name</td>
+            <td>{{selectedEvent.name}}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>{{selectedEvent.locationName}}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>
+                {{selectedEvent.locationAddress.streetName}} {{selectedEvent.locationAddress.streetNumber}}</br>
+                {{selectedEvent.locationAddress.postcode}} {{selectedEvent.locationAddress.city}}
+            </td>
+        </tr>
+    </table>
+</div>

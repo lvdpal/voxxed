@@ -6,6 +6,7 @@ angular.module('myApp', [
   'ngSanitize',
   'myApp.order',
   'myApp.event',
+  'myApp.eventFactory',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', '$httpProvider', function($locationProvider, $routeProvider, $httpProvider) {
