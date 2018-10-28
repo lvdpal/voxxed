@@ -19,7 +19,7 @@ angular.module('myApp.order', ['ngRoute', 'ngSanitize'])
 
     function createOrder() {
     	console.log('create order');
-    	var urlCreateOrder = 'http://localhost:8080/';
+    	var urlCreateOrder = 'http://localhost:8080/order/createOrder';
     	$http.get(urlCreateOrder).then(function(response) {
             $scope.orderId = response.data;
             console.log('created order: ' + $scope.orderId);
