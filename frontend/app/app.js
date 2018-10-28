@@ -5,12 +5,13 @@ angular.module('myApp', [
   'ngRoute',
   'ngSanitize',
   'myApp.order',
+  'myApp.event',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', '$httpProvider', function($locationProvider, $routeProvider, $httpProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/order'});
+  $routeProvider.otherwise({redirectTo: '/event'});
 
   //$httpProvider.defaults.headers.post = {};
   //$httpProvider.defaults.useXDomain = true;
