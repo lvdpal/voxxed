@@ -9,4 +9,5 @@ include 'eventService'
 include 'sellerService'
 include 'ticketService'
 include 'buyerService'
+include 'addressService'
 
