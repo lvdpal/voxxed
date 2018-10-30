@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/programming")
@@ -35,13 +36,23 @@ public class ProgrammingController {
 
     @CrossOrigin
     @RequestMapping(value = "/getEvents", method = RequestMethod.GET)
-    public List<ProgrammingEvent> getEvents() { return (List<ProgrammingEvent>) eventRepository.findAll();}
+    public List<ProgrammingEvent> getEvents() {
+        List<ProgrammingEvent> list =  (List<ProgrammingEvent>) eventRepository.findAll();
+        System.out.println("# of events: " + list.size());
+        list.stream().forEach(l-> System.out.println(l.getId() + " " + l.getName() + " " + l.getLocation()));
+        return list;
+    }
 
     @CrossOrigin
-    @RequestMapping(value = "/deleteEvent", method = RequestMethod.DELETE)
-    public ResponseEntity deleteEvent(ProgrammingEvent programmingEvent) {
-        eventRepository.delete(programmingEvent);
-        return new ResponseEntity(null, HttpStatus.OK);
+    @RequestMapping(value = "/deleteEvent/{eventId}", method = RequestMethod.DELETE)
+    public boolean deleteEvent(@PathVariable("eventId") Long eventId) {
+        System.out.println("Delete event " +  eventId);
+        Optional<ProgrammingEvent> programmingEvent = eventRepository.findById(eventId);
+        if (programmingEvent.isPresent()) {
+            eventRepository.delete(programmingEvent.get());
+        }
+        System.out.println("Event Deleted " + getEvents().size());
+        return true;
     }
 
     @CrossOrigin
