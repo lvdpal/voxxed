@@ -2,13 +2,14 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
-  'ngRoute',
-  'ngSanitize',
-  'myApp.order',
-  'myApp.event',
-  'myApp.eventFactory',
-  'myApp.version',
-  'myApp.guestlist'
+    'ngRoute',
+    'ngSanitize',
+    'myApp.order',
+    'myApp.event',
+    'myApp.eventFactory',
+    'myApp.version',
+    'myApp.guestlist',
+    'myApp.report'
 ]).
 config(['$locationProvider', '$routeProvider', '$httpProvider', function($locationProvider, $routeProvider, $httpProvider) {
   $locationProvider.hashPrefix('!');

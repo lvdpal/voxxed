@@ -1,0 +1,32 @@
+<div ng-controller="LocationReportCtrl">
+    <H1>Voxxed ticketmaster: location report</H1>
+
+    <table border='1'>
+        <tr>
+            <td>Name</td>
+            <td colspan="2">{{report.name}}</td>
+        </tr>
+        <tr>
+            <td>Total number of tickets sold</td>
+            <td colspan="2">{{report.totalNumberOfTicketsSold}}</td>
+        </tr>
+        <tr>
+            <td>Total revenue</td>
+            <td colspan="2">{{report.totalAmount}}</td>
+        </tr>
+        <tr>
+            <td>TicketType</td>
+            <td>Number of tickets</td>
+            <td>Total amount</td>
+        </tr>
+        <tr ng-repeat="type in report.ticketsPerType">
+            <td>{{type.ticketType}}</td>
+            <td>{{type.number}}</td>
+            <td>{{type.totalAmount}}</td>
+        </tr>
+
+    </table>
+    <br/>
+
+    <button ng-click="backToList()">Back to events</button>
+</div>

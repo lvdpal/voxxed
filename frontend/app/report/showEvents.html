@@ -1,0 +1,17 @@
+<div ng-controller="ReportCtrl">
+	<H1>Voxxed ticketmaster: reporting events</H1>
+
+	<table border='1' ng-show="events">
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+            <th></th>
+		</tr>
+		<tr ng-repeat="event in events">
+		  <td>{{event.name}}</td>
+		  <td>{{event.locationName}}</td>
+          <td><button ng-click="openEventReport(event.id)">Report</button></td>
+		</tr>
+	</table>
+	<div ng-show="!events">There are no events at the moment</div>
+</div>

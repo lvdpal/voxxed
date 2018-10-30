@@ -1,0 +1,15 @@
+<div ng-controller="ReportCtrl">
+	<H1>Voxxed ticketmaster: reporting locations</H1>
+
+	<table border='1' ng-show="locations">
+		<tr>
+			<th>Location</th>
+            <th></th>
+		</tr>
+		<tr ng-repeat="location in locations">
+		  <td>{{location.name}}</td>
+          <td><button ng-click="openLocationReport(location.id)">Report</button></td>
+		</tr>
+	</table>
+	<div ng-show="!events">You have not created any locations yet.</div>
+</div>
