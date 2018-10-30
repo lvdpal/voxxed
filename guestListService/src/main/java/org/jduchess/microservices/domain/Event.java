@@ -12,6 +12,10 @@ public class Event {
     private Long id;
     private String name;
 
+    public Event(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

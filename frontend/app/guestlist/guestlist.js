@@ -21,20 +21,9 @@ angular.module('myApp.guestlist', ['ngRoute', 'ngSanitize'])
     $scope.selectedEventId = $routeParams.eventId;
 
     function showEvents() {
-        var getEventsUrl = 'http://localhost:8080/';
-        // var getEventsUrl = 'http://localhost:8080/event/getAll';
+        var getEventsUrl = 'http://localhost:8080/guestList/getEvents';
         $http.get(getEventsUrl).then(function(response) {
-            // $scope.events = response.data;
-            $scope.events = [
-                {
-                    "id": 1,
-                    "name": "Jan Smit"
-                },
-                {
-                    "id": 2,
-                    "name": "Marco Borsato"
-                }
-            ];
+            $scope.events = response.data;
         }, function (response) {
             console.log('Error: ', response);
         });
@@ -55,28 +44,9 @@ angular.module('myApp.guestlist', ['ngRoute', 'ngSanitize'])
     $scope.selectedEventId = $routeParams.eventId;
 
     function showGuestlist() {
-        var getGuestlistUrl = 'http://localhost:8080/';
-        // var getGuestlistUrl = 'http://localhost:8080/event/getAll';
+        var getGuestlistUrl = 'http://localhost:8080/guestList/getGuestsForEvent/' + $scope.selectedEventId;
         $http.get(getGuestlistUrl).then(function(response) {
-            // $scope.guestlist = response.data;
-            $scope.guestlist = [
-                {
-                    "name": "Amerongen, Piet van",
-                    "partySize": 1
-                },
-                {
-                    "name": "Borsato, Marco",
-                    "partySize": 2
-                },
-                {
-                    "name": "Pietersen, Piet",
-                    "partySize": 5
-                },
-                {
-                    "name": "Zwan, Jan",
-                    "partySize": 1
-                }
-            ];
+            $scope.guestlist = response.data;
         }, function (response) {
             console.log('Error: ', response);
         });
