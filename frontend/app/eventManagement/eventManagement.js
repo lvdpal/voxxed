@@ -37,9 +37,8 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
         };
 
         $scope.deleteEvent = function(event) {
-            var urlCreateEvent = 'http://localhost:8085/programming/deleteEvent';
-            $http.delete(urlCreateEvent, event).then(function(response) {
-                console.log('deleted event: ' + event);
+            var urlCreateEvent = 'http://localhost:8085/programming/deleteEvent/'+event.id;
+            $http.delete(urlCreateEvent).then(function(response) {
                 showEvents();
             }, function (response) {
                 console.log('Error: ', response);
