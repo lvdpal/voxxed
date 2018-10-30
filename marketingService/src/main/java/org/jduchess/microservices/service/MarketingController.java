@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("marketing")
+@RequestMapping("/marketing")
 public class MarketingController {
     private EventRepository eventRepository;
     private EventDetailRepository eventDetailRepository;
