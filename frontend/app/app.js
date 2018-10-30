@@ -9,7 +9,9 @@ angular.module('myApp', [
     'myApp.eventFactory',
     'myApp.version',
     'myApp.guestlist',
-    'myApp.report'
+    'myApp.report',
+    'myApp.eventManagement',
+    'myApp.eventManagementFactory'
 ]).
 config(['$locationProvider', '$routeProvider', '$httpProvider', function($locationProvider, $routeProvider, $httpProvider) {
   $locationProvider.hashPrefix('!');

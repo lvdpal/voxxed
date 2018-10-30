@@ -48,7 +48,6 @@ angular.module('myApp.report', ['ngRoute', 'ngSanitize'])
         }
 
         $scope.openEventReport = function(eventId) {
-            console.log(eventId);
             $location.path('/report/eventReport/'+eventId);
         };
 

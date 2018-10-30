@@ -1,0 +1,10 @@
+<div ng-controller="OrderCtrl">
+    <H1>Voxxed ticketmaster</H1>
+
+    <form>
+        <label>Name: <input type="text" ng-model="event.name" /></label><br />
+        <label>Locations: <input type="text" ng-model="event.location" /></label><br />
+        <input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" ng-click="createEvent(event)" value="Save" />
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<div ng-controller="EventManagementCtrl">
+	<H1>Voxxed ticketmaster: managing events</H1>
+
+	<table border='1' ng-show="events">
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+            <th></th>
+		</tr>
+		<tr ng-repeat="event in events">
+            <td>{{event.name}}</td>
+            <td>{{event.locationName}}</td>
+            <td>
+              <button ng-click="editEvent(event)">Update</button>
+              <button ng-click="deleteEvent(event.id)">Delete</button>
+            </td>
+		</tr>
+	</table>
+	<button ng-click="addEvent()">Add event</button>
+</div>
