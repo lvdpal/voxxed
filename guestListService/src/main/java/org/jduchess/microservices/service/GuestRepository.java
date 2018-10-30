@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-interface GuestRepository extends CrudRepository<Guest, Long> {
+public interface GuestRepository extends CrudRepository<Guest, Long> {
     List<Guest> findByEventId(Long eventId);
 }
