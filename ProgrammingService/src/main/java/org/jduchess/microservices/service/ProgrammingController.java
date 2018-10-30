@@ -2,6 +2,8 @@ package org.jduchess.microservices.service;
 
 import org.jduchess.microservices.domain.ProgrammingEvent;
 import org.jduchess.microservices.domain.EventSeating;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,8 +39,9 @@ public class ProgrammingController {
 
     @CrossOrigin
     @RequestMapping(value = "/deleteEvent", method = RequestMethod.DELETE)
-    public void deleteEvent(ProgrammingEvent programmingEvent) {
+    public ResponseEntity deleteEvent(ProgrammingEvent programmingEvent) {
         eventRepository.delete(programmingEvent);
+        return new ResponseEntity(null, HttpStatus.OK);
     }
 
     @CrossOrigin
