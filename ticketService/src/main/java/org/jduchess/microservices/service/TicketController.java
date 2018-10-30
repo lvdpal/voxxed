@@ -3,14 +3,12 @@ package org.jduchess.microservices.service;
 import org.jduchess.microservices.domain.Event;
 import org.jduchess.microservices.domain.EventDetails;
 import org.jduchess.microservices.domain.EventTicketInformation;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("ticket")
 public class TicketController {
     private EventRepository eventRepository;
     private TicketRepository ticketRepository;
@@ -26,16 +24,19 @@ public class TicketController {
         this.eventTicketInformationRepository = eventTicketInformationRepository;
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/getEvents", method = RequestMethod.GET)
     public List<Event> getEvents() {
         return (List<Event>) eventRepository.findAll();
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/getEventDetails/{eventId}", method = RequestMethod.GET)
     public EventDetails getEventDetails(@PathVariable("eventId") Long eventId) {
         return eventDetailsRepository.findByEventId(eventId);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/getEventTicketInformation/{eventId}", method = RequestMethod.GET)
     public EventTicketInformation getEventTicketInformation(@PathVariable("eventId")Long eventId) {
         return eventTicketInformationRepository.findByEventId(eventId);
