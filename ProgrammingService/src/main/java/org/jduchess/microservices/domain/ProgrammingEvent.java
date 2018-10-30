@@ -3,13 +3,14 @@ package org.jduchess.microservices.domain;
 import javax.persistence.*;
 
 @Entity
-public class Event {
+public class ProgrammingEvent {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @OneToOne
-    private Location location;
+    private String location;
+
+    private String name;
 
     public Long getId() {
         return id;
@@ -19,11 +20,19 @@ public class Event {
         this.id = id;
     }
 
-    public Location getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
