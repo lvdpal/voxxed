@@ -32,13 +32,11 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
         }
 
         $scope.editEvent = function(event) {
-            console.log('editing event');
             eventManagementFactory.setEvent(event);
             $location.path('/eventManagement/edit');
         };
 
         $scope.deleteEvent = function(event) {
-            console.log('delete event');
             var urlCreateEvent = 'http://localhost:8085/programming/deleteEvent';
             $http.delete(urlCreateEvent, event).then(function(response) {
                 console.log('deleted event: ' + event);
@@ -52,7 +50,6 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
             $location.path('/eventManagement/add');
         };
         $scope.createEvent = function(event) {
-            console.log('create event');
             var urlCreateEvent = 'http://localhost:8085/programming/addEvent';
             $http.post(urlCreateEvent, event).then(function(response) {
                 showEvents();
@@ -69,7 +66,6 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
         $scope.selectedEvent = eventManagementFactory.getEvent();
 
         $scope.saveEvent = function(event) {
-            console.log('update event: '+event);
             var urlCreateEvent = 'http://localhost:8085/programming/updateEvent';
             $http.post(urlCreateEvent, event).then(function(response) {
                 $location.path('/eventManagement/events');
