@@ -1,0 +1,16 @@
+<div ng-controller="GuestlistCtrl">
+    <H1>Voxxed ticketmaster: guestlist</H1>
+
+    <table border='1'>
+        <tr>
+            <th>Name</th>
+            <td>Party size</td>
+        </tr>
+        <tr ng-repeat="guest in guestlist">
+            <td>{{guest.name}}</td>
+            <td>{{guest.partySize}}</td>
+        </tr>
+    </table>
+
+    <button ng-click="backToList()">Back to event list</button>
+</div>

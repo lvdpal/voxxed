@@ -18,12 +18,7 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
 	$scope.events = {};
 	$scope.selectedEvent = eventFactory.get();
 
-	$scope.allEvents = function() {
-		console.log('fetching all events');
-        fetchEvents();
-    };
-
-    function showEvents() {
+	function showEvents() {
     	var getEventsUrl = 'http://localhost:8080/';
     	// var getEventsUrl = 'http://localhost:8080/event/getAll';
     	$http.get(getEventsUrl).then(function(response) {
@@ -54,6 +49,7 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
     $scope.orderTicket = function(id) {
         $location.path('/order');
         eventFactory.set(event);
-    }
+    };
+
     showEvents();
 }]);
