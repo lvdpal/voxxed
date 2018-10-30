@@ -2,17 +2,9 @@
 	<H1>Voxxed ticketmaster</H1>
 
 	<form>
-		<label>Name: <input type="text" ng-model="ticket.buyer.name" /></label><br />
-		<label>Street name: <input type="text" ng-model="ticket.buyer.address.streetName" /></label><br />
-		<label>Street number: <input type="text" ng-model="ticket.buyer.address.streetNumber" /></label><br />
-		<label>Postcode: <input type="text" ng-model="ticket.buyer.address.postcode" /></label><br />
-		<label>City: <input type="text" ng-model="ticket.buyer.address.city" /></label><br />
-		<label>Date: <input type="date" ng-model="ticket.date" /></label><br />
-		<label>Ticket type: <select ng-model="ticket.type" ng-options="selectedEvent.ticketTypes"></select></label>
+		<label>Name: <input type="text" ng-model="ticket.name" /></label><br />
+		<label>Party size: <input type="text" ng-model="ticket.partySize" /></label><br />
 		<input type="button" ng-click="reset()" value="Reset" />
 		<input type="submit" ng-click="order(ticket)" value="Save" />
 	</form>
-	<div>
-		<button ng-click="startOrder()">Place order</button>
-	</div>
 </div>

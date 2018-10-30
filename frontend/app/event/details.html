@@ -7,6 +7,10 @@
             <td>{{selectedEvent.name}}</td>
         </tr>
         <tr>
+            <td>Date</td>
+            <td>{{selectedEvent.date}}</td>
+        </tr>
+        <tr>
             <td>Location</td>
             <td>{{selectedEvent.locationName}}</td>
         </tr>
@@ -18,8 +22,11 @@
             </td>
         </tr>
     </table>
+    <br/>
 
-    <button ng-click="orderTicket(selectedEvent)">Place order</button>
+    <div ng-repeat="type in ticketTypes">
+        <button ng-click="orderTicket(selectedEvent, type)">{{type.name}}: {{type.price}}</button>
+    </div>
 
     <button ng-click="backToList()">Back to all events</button>
 </div>
