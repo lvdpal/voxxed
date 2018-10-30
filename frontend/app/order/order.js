@@ -9,14 +9,20 @@ angular.module('myApp.order', ['ngRoute', 'ngSanitize'])
   });
 }])
 
-.controller('OrderCtrl', ['$scope', '$http', function($scope, $http) {
-	$scope.orderId = {};
-    $scope.selectedEvent = eventFactory.get();
+.controller('OrderCtrl', ['$scope', '$http', 'eventFactory', function($scope, $http, eventFactory) {
+    $scope.selectedEvent = eventFactory.getEvent();
+    $scope.selectedTicketType = eventFactory.getTicketType();
+    $scope.ticket = {
+        "name": "",
+        "partySize": "",
+        "event": $scope.selectedEvent,
+        "ticketType": $scope.selectedTicketType
+    };
 
 	$scope.order = function(ticket) {
 		console.log('order your tickets here');
 		createOrder(ticket);
-	}
+	};
 
     function createOrder(ticket) {
     	console.log('create order');

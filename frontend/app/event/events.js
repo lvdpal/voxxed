@@ -16,7 +16,8 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
 
 .controller('EventCtrl', ['$scope', '$http', '$location', 'eventFactory', function($scope, $http, $location, eventFactory) {
 	$scope.events = {};
-	$scope.selectedEvent = eventFactory.get();
+	$scope.selectedEvent = eventFactory.getEvent();
+	$scope.selectedTicketType = eventFactory.getTicketType();
 
 	function showEvents() {
     	var getEventsUrl = 'http://localhost:8080/';
@@ -38,18 +39,49 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
         });
     }
 
+    function showTicketTypes() {
+	    var getTicketTypesUrl = 'http://localhost:8080';
+
+	    $http.get(getTicketTypesUrl).then(function(response) {
+	        $scope.ticketTypes = [
+                {
+                    "name": "Early bird ticket",
+                    "price": "50"
+                },
+                {
+                    "name": "Junior ticket",
+                    "price": "40"
+                },
+                {
+                    "name": "Senior ticket",
+                    "price": "60"
+                },
+                {
+                    "name": "Group ticket (5 persons)",
+                    "price": "350"
+                },
+                {
+                    "name": "Regular ticket",
+                    "price": "75"
+                }
+            ];
+        });
+    }
+
     $scope.openDetails = function(event) {
         $location.path('/event/details');
-        eventFactory.set(event);
+        eventFactory.setEvent(event);
     };
     $scope.backToList = function() {
         $location.path('/event');
     };
 
-    $scope.orderTicket = function(id) {
+    $scope.orderTicket = function(event, ticketType) {
         $location.path('/order');
-        eventFactory.set(event);
+        eventFactory.setEvent(event);
+        eventFactory.setTicketType(ticketType);
     };
 
     showEvents();
+    showTicketTypes();
 }]);
