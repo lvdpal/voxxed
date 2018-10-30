@@ -8,7 +8,7 @@ public class Guest {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     @OneToOne
-    private Event event;
+    private GuestListEvent event;
     private String name;
     private Integer partySize;
 
@@ -20,11 +20,11 @@ public class Guest {
         this.id = id;
     }
 
-    public Event getEvent() {
+    public GuestListEvent getEvent() {
         return event;
     }
 
-    public void setEvent(Event event) {
+    public void setEvent(GuestListEvent event) {
         this.event = event;
     }
 

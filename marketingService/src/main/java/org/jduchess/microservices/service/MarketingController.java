@@ -1,6 +1,6 @@
 package org.jduchess.microservices.service;
 
-import org.jduchess.microservices.domain.Event;
+import org.jduchess.microservices.domain.MarketingEvent;
 import org.jduchess.microservices.domain.EventDetail;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,8 +20,8 @@ public class MarketingController {
 
     @CrossOrigin
     @RequestMapping(value = "/getEvents", method = RequestMethod.GET)
-    public List<Event> getEvents() {
-        return (List<Event>) eventRepository.findAll();
+    public List<MarketingEvent> getEvents() {
+        return (List<MarketingEvent>) eventRepository.findAll();
     }
 
     @CrossOrigin

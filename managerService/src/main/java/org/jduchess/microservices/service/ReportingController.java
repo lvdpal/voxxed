@@ -1,6 +1,6 @@
 package org.jduchess.microservices.service;
 
-import org.jduchess.microservices.domain.Event;
+import org.jduchess.microservices.domain.MangerEvent;
 import org.jduchess.microservices.domain.SalesReport;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,16 +10,16 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/reporting")
 public class ReportingController {
-    private EventRepository eventRepository;
+    private ManagerEventRepository managerEventRepository;
 
-    public ReportingController(EventRepository eventRepository, LocationRepository locationRepository) {
-        this.eventRepository = eventRepository;
+    public ReportingController(ManagerEventRepository managerEventRepository, LocationRepository locationRepository) {
+        this.managerEventRepository = managerEventRepository;
     }
 
     @CrossOrigin
     @RequestMapping(value = "/getEvents", method = RequestMethod.GET)
-    public List<Event> getEvents() {
-        return (List<Event>) eventRepository.findAll();
+    public List<MangerEvent> getEvents() {
+        return (List<MangerEvent>) managerEventRepository.findAll();
     }
 
     @CrossOrigin

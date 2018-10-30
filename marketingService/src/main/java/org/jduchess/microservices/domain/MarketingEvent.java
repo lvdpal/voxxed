@@ -6,10 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Event {
+public class MarketingEvent {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+
     private String name;
 
     public Long getId() {

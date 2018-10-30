@@ -9,7 +9,7 @@ public class EventDetail {
     private Long id;
 
     @OneToOne
-    private Event event;
+    private MarketingEvent marketingEvent;
 
     private Integer numberOfTickets;
 
@@ -23,12 +23,12 @@ public class EventDetail {
         this.id = id;
     }
 
-    public Event getEvent() {
-        return event;
+    public MarketingEvent getMarketingEvent() {
+        return marketingEvent;
     }
 
-    public void setEvent(Event event) {
-        this.event = event;
+    public void setMarketingEvent(MarketingEvent marketingEvent) {
+        this.marketingEvent = marketingEvent;
     }
 
     public Integer getNumberOfTickets() {

@@ -6,12 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Event {
+public class GuestListEvent {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-
     private String name;
+
+    public GuestListEvent(String name) {
+        this.name = name;
+    }
 
     public Long getId() {
         return id;

@@ -21,7 +21,7 @@ angular.module('myApp.guestlist', ['ngRoute', 'ngSanitize'])
     $scope.selectedEventId = $routeParams.eventId;
 
     function showEvents() {
-        var getEventsUrl = 'http://localhost:8080/guestList/getEvents';
+        var getEventsUrl = 'http://localhost:8082/guestList/getEvents';
         $http.get(getEventsUrl).then(function(response) {
             $scope.events = response.data;
         }, function (response) {
@@ -44,7 +44,7 @@ angular.module('myApp.guestlist', ['ngRoute', 'ngSanitize'])
     $scope.selectedEventId = $routeParams.eventId;
 
     function showGuestlist() {
-        var getGuestlistUrl = 'http://localhost:8080/guestList/getGuestsForEvent/' + $scope.selectedEventId;
+        var getGuestlistUrl = 'http://localhost:8082/guestList/getGuestsForEvent/' + $scope.selectedEventId;
         $http.get(getGuestlistUrl).then(function(response) {
             $scope.guestlist = response.data;
         }, function (response) {
