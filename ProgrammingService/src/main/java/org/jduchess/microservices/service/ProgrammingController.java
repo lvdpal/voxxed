@@ -34,6 +34,23 @@ public class ProgrammingController {
     }
 
     @CrossOrigin
+    @RequestMapping(value = "/updateEvent", method = RequestMethod.POST)
+    public Event updateEvent(@RequestBody Event event) {
+        return eventRepository.save(event);
+    }
+
+
+    @CrossOrigin
+    @RequestMapping(value = "/getEvents", method = RequestMethod.GET)
+    public List<Event> getEvents() { return (List<Event>) eventRepository.findAll();}
+
+    @CrossOrigin
+    @RequestMapping(value = "/deleteEvent", method = RequestMethod.DELETE)
+    public void deleteEvent(Event event) {
+        eventRepository.delete(event);
+    }
+
+    @CrossOrigin
     @RequestMapping(value = "/addSeating", method = RequestMethod.POST)
     public EventSeating addSeating(@RequestBody EventSeating seating) {
         return eventSeatingRepository.save(seating);

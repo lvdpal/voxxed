@@ -23,20 +23,9 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
         $scope.events = {};
 
         function showEvents() {
-            var getEventsUrl = 'http://localhost:8080/';
-            // var getEventsUrl = 'http://localhost:8080/event/getAll';
+            var getEventsUrl = 'http://localhost:8085/programming/getEvents';
             $http.get(getEventsUrl).then(function(response) {
-                // $scope.events = response.data;
-                $scope.events = [
-                    {
-                        "name": "Jan Smit",
-                        "locationName": "Arena"
-                    },
-                    {
-                        "name": "Marco Borsato",
-                        "locationName": "Ziggo Dome"
-                    }
-                ];
+                $scope.events = response.data;
             }, function (response) {
                 console.log('Error: ', response);
             });
@@ -47,11 +36,11 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
             $location.path('/eventManagement/edit');
         };
 
-        $scope.deleteEvent = function(eventId) {
+        $scope.deleteEvent = function(event) {
             console.log('delete event');
-            var urlCreateEvent = 'http://localhost:8080/';
-            $http.delete(urlCreateEvent, eventId).then(function(response) {
-                console.log('deleted event: ' + eventId);
+            var urlCreateEvent = 'http://localhost:8085/programming/deleteEvent';
+            $http.delete(urlCreateEvent, event).then(function(response) {
+                console.log('deleted event: ' + event);
             }, function (response) {
                 console.log('Error: ', response);
             });
@@ -64,10 +53,10 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
         };
         $scope.createEvent = function(event) {
             console.log('create event');
-            var urlCreateEvent = 'http://localhost:8080/';
+            var urlCreateEvent = 'http://localhost:8085/programming/addEvent';
             $http.post(urlCreateEvent, event).then(function(response) {
-                $scope.eventId = response.data;
-                console.log('created event: ' + $scope.eventId);
+                $scope.selectedEvent = response.data;
+                console.log('created event: ' + $scope.selectedEvent.id);
             }, function (response) {
                 console.log('Error: ', response);
             });
@@ -81,10 +70,10 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
 
         $scope.saveEvent = function(event) {
             console.log('update event');
-            var urlCreateEvent = 'http://localhost:8080/';
+            var urlCreateEvent = 'http://localhost:8085/programming/updateEvent';
             $http.post(urlCreateEvent, event).then(function(response) {
-                $scope.eventId = response.data;
-                console.log('updated event: ' + $scope.eventId);
+                $scope.selectedEvent = response.data;
+                console.log('updated event: ' + $scope.event);
             }, function (response) {
                 console.log('Error: ', response);
             });
