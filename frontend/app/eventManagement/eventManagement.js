@@ -42,11 +42,10 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
             var urlCreateEvent = 'http://localhost:8085/programming/deleteEvent';
             $http.delete(urlCreateEvent, event).then(function(response) {
                 console.log('deleted event: ' + event);
+                showEvents();
             }, function (response) {
                 console.log('Error: ', response);
             });
-
-            showEvents();
         };
 
         $scope.addEvent = function() {
@@ -56,14 +55,11 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
             console.log('create event');
             var urlCreateEvent = 'http://localhost:8085/programming/addEvent';
             $http.post(urlCreateEvent, event).then(function(response) {
-                $scope.selectedEvent = response.data;
-                console.log('created event: ' + $scope.selectedEvent.id);
+                showEvents();
+                $location.path('/eventManagement/events');
             }, function (response) {
                 console.log('Error: ', response);
             });
-
-            showEvents();
-            $location.path('/eventManagement/events');
         };
 
         showEvents();
@@ -73,16 +69,13 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
         $scope.selectedEvent = eventManagementFactory.getEvent();
 
         $scope.saveEvent = function(event) {
-            console.log('update event');
+            console.log('update event: '+event);
             var urlCreateEvent = 'http://localhost:8085/programming/updateEvent';
             $http.post(urlCreateEvent, event).then(function(response) {
-                $scope.selectedEvent = response.data;
-                console.log('updated event: ' + $scope.event);
+                $location.path('/eventManagement/events');
             }, function (response) {
                 console.log('Error: ', response);
             });
-
-            $location.path('/eventManagement/events');
         };
     }])
 ;
