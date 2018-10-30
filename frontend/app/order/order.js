@@ -3,10 +3,15 @@
 angular.module('myApp.order', ['ngRoute', 'ngSanitize'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/order', {
-    templateUrl: 'order/order.html',
-    controller: 'OrderCtrl'
-  });
+  $routeProvider
+      .when('/order', {
+        templateUrl: 'order/order.html',
+        controller: 'OrderCtrl'
+      })
+      .when('/myOrders', {
+          templateUrl: 'order/list.html',
+          controller: 'OrderCtrl'
+      });
 }])
 
 .controller('OrderCtrl', ['$scope', '$http', 'eventFactory', function($scope, $http, eventFactory) {
@@ -18,6 +23,7 @@ angular.module('myApp.order', ['ngRoute', 'ngSanitize'])
         "event": $scope.selectedEvent,
         "ticketType": $scope.selectedTicketType
     };
+    $scope.orders = [];
 
 	$scope.order = function(ticket) {
 		console.log('order your tickets here');
@@ -33,5 +39,27 @@ angular.module('myApp.order', ['ngRoute', 'ngSanitize'])
         }, function (response) {
             console.log('Error: ', response);
         });
+    };
+
+    function showOrders() {
+        var urlFetchOrders = 'http://localhost:8080/';
+        $http.get(urlFetchOrders).then(function(response) {
+            $scope.orders = [
+                {
+                    "name": "Jan Smit",
+                    "location": "Arena",
+                    "groupSize": "1",
+                    "ticketType": "Early bird"
+                },
+                {
+                    "name": "Marco Borsato",
+                    "locationName": "Ziggo Dome",
+                    "groupSize": "5",
+                    "ticketType": "Group ticket (5 persons)"
+                }
+            ];
+        })
     }
+
+    showOrders();
 }]);

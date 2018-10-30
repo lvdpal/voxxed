@@ -1,0 +1,19 @@
+<div ng-controller="OrderCtrl">
+    <H1>Voxxed ticketmaster: your orders</H1>
+
+    <table border='1' ng-show="orders">
+        <tr>
+            <th>Name event</th>
+            <th>Location</th>
+            <th>Groupsize</th>
+            <th>Ticket type</th>
+        </tr>
+        <tr ng-repeat="order in orders">
+            <td>{{order.name}}</td>
+            <td>{{order.location}}</td>
+            <td>{{order.groupSize}}</td>
+            <td>{{order.ticketType}}</td>
+        </tr>
+    </table>
+    <div ng-show="!orders">You have not ordered any tickets</div>
+</div>
