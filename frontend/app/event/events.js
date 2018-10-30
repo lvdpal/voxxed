@@ -27,7 +27,6 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
     	var getEventsUrl = 'http://localhost:8080/';
     	// var getEventsUrl = 'http://localhost:8080/event/getAll';
     	$http.get(getEventsUrl).then(function(response) {
-            console.log('We have retrieved the events');
     	    // $scope.events = response.data;
             $scope.events = [
                 {
@@ -39,7 +38,6 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
                     "locationName": "Ziggo Dome"
                 }
             ];
-            console.log('retrieved events ' + $scope.events);
         }, function (response) {
             console.log('Error: ', response);
         });
@@ -47,6 +45,14 @@ angular.module('myApp.event', ['ngRoute', 'ngSanitize'])
 
     $scope.openDetails = function(event) {
         $location.path('/event/details');
+        eventFactory.set(event);
+    };
+    $scope.backToList = function() {
+        $location.path('/event');
+    };
+
+    $scope.orderTicket = function(id) {
+        $location.path('/order');
         eventFactory.set(event);
     }
     showEvents();

@@ -1,18 +1,18 @@
 <div ng-controller="OrderCtrl">
 	<H1>Voxxed ticketmaster</H1>
-	<div>The last order was: {{orderId}}</div>
-	<!--<table border='1'>-->
-		<!--<tr ng-repeat="row in deckOfCards">-->
-		  <!--<td ng-repeat="card in row" ng-click="selectCard(card)" id="card{{card.id}}"-->
-			  <!--width="360px" height="100px" align="center">-->
-			<!--<p ng-bind-html="drawCard(card) | to_trusted" style="margin:0px;"></p>-->
-		  <!--</td>-->
-		<!--</tr>-->
-	<!--</table>-->
-	<!--<span>validSet: {{validSet}}</span><br>-->
-	<!--<span>score: {{score}}</span><br>-->
-	<!--<span>highscore: {{highScore}}</span> <br>-->
+
+	<form>
+		<label>Name: <input type="text" ng-model="ticket.buyer.name" /></label><br />
+		<label>Street name: <input type="text" ng-model="ticket.buyer.address.streetName" /></label><br />
+		<label>Street number: <input type="text" ng-model="ticket.buyer.address.streetNumber" /></label><br />
+		<label>Postcode: <input type="text" ng-model="ticket.buyer.address.postcode" /></label><br />
+		<label>City: <input type="text" ng-model="ticket.buyer.address.city" /></label><br />
+		<label>Date: <input type="date" ng-model="ticket.date" /></label><br />
+		<label>Ticket type: <select ng-model="ticket.type" ng-options="selectedEvent.ticketTypes"></select></label>
+		<input type="button" ng-click="reset()" value="Reset" />
+		<input type="submit" ng-click="order(ticket)" value="Save" />
+	</form>
 	<div>
-		<button ng-click="startOrder()" class="md-raised md-button md-ink-ripple">START</button>
+		<button ng-click="startOrder()">Place order</button>
 	</div>
 </div>

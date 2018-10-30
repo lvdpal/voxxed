@@ -11,16 +11,17 @@ angular.module('myApp.order', ['ngRoute', 'ngSanitize'])
 
 .controller('OrderCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.orderId = {};
+    $scope.selectedEvent = eventFactory.get();
 
-	$scope.startOrder = function() {
+	$scope.order = function(ticket) {
 		console.log('order your tickets here');
-		createOrder();
+		createOrder(ticket);
 	}
 
-    function createOrder() {
+    function createOrder(ticket) {
     	console.log('create order');
     	var urlCreateOrder = 'http://localhost:8080/order/createOrder';
-    	$http.get(urlCreateOrder).then(function(response) {
+    	$http.post(urlCreateOrder, ticket).then(function(response) {
             $scope.orderId = response.data;
             console.log('created order: ' + $scope.orderId);
         }, function (response) {
