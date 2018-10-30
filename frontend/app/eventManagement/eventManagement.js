@@ -32,6 +32,7 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
         }
 
         $scope.editEvent = function(event) {
+            console.log('editing event');
             eventManagementFactory.setEvent(event);
             $location.path('/eventManagement/edit');
         };
@@ -60,6 +61,9 @@ angular.module('myApp.eventManagement', ['ngRoute', 'ngSanitize'])
             }, function (response) {
                 console.log('Error: ', response);
             });
+
+            showEvents();
+            $location.path('/eventManagement/events');
         };
 
         showEvents();
