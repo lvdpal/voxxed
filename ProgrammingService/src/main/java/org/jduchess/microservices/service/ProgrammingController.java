@@ -57,4 +57,18 @@ public class ProgrammingController {
     public EventSeating addSeating(@RequestBody EventSeating seating) {
         return eventSeatingRepository.save(seating);
     }
+
+    @CrossOrigin
+    @RequestMapping(value = "/deleteSeating/{seatingId}", method = RequestMethod.DELETE)
+    public boolean addSeating(@PathVariable("seatingId") Long seatingId) {
+        Optional<EventSeating> eventSeating = eventSeatingRepository.findById(seatingId);
+        eventSeating.ifPresent(seating -> eventSeatingRepository.delete(seating));
+        return true;
+    }
+
+    @CrossOrigin
+    @RequestMapping(value = "/updateSeating", method = RequestMethod.POST)
+    public EventSeating updateSeating(@RequestBody EventSeating seating) {
+        return eventSeatingRepository.save(seating);
+    }
 }

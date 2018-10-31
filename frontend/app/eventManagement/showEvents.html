@@ -14,8 +14,9 @@
             <td>
                 <span ng-repeat="seat in event.eventSeatings">
                     {{seat.rank}} - {{seat.amountOfSeats}}
-                    <button ng-click="editSeating(event)">Edit seating</button>
+                    <button ng-click="editSeating(seat)">Edit seating</button>
                     <button ng-click="deleteSeating(seat)">Delete seating</button>
+                    <br/>
                 </span>
             </td>
             <td>
