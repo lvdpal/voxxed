@@ -1,0 +1,10 @@
+<div ng-controller="OrderCtrl">
+    <H1>Voxxed ticketmaster: add seating</H1>
+
+    <form>
+        <label>Rank: <input type="text" ng-model="seating.rank" /></label><br />
+        <label>Number of seats: <input type="text" ng-model="seating.amountOfSeats" /></label><br />
+        <input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" ng-click="createSeating(seating, selectedEvent)" value="Save" />
+    </form>
+</div>

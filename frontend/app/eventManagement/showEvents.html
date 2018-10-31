@@ -5,14 +5,24 @@
 		<tr>
 			<th>Name</th>
 			<th>Location</th>
+            <th>Seating</th>
             <th></th>
 		</tr>
 		<tr ng-repeat="event in events">
             <td>{{event.name}}</td>
             <td>{{event.location}}</td>
             <td>
+                <span ng-repeat="seat in event.eventSeatings">
+                    {{seat.rank}} - {{seat.amountOfSeats}}
+                    <button ng-click="editSeating(event)">Edit seating</button>
+                    <button ng-click="deleteSeating(seat)">Delete seating</button>
+                </span>
+            </td>
+            <td>
               <button ng-click="editEvent(event)">Update</button>
               <button ng-click="deleteEvent(event)">Delete</button>
+              <button ng-click="addSeating(event)">Add seating</button>
+
             </td>
 		</tr>
 	</table>

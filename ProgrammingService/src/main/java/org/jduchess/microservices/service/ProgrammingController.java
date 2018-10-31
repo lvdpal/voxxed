@@ -58,6 +58,10 @@ public class ProgrammingController {
     @CrossOrigin
     @RequestMapping(value = "/addSeating", method = RequestMethod.POST)
     public EventSeating addSeating(@RequestBody EventSeating seating) {
+        Optional<ProgrammingEvent> event = eventRepository.findById(seating.getProgrammingEvent().getId());
+        if(event.isPresent()) {
+            seating.setProgrammingEvent(event.get());
+        }
         return eventSeatingRepository.save(seating);
     }
 }

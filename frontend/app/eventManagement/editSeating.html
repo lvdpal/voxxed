@@ -1,0 +1,10 @@
+<div ng-controller="EventManagementEditCtrl">
+    <H1>Voxxed ticketmaster: alter seating</H1>
+
+    <form>
+        <label>Name: <input type="text" ng-model="selectedSeating.rank" /></label><br />
+        <label>Number: <input type="text" ng-model="selectedSeating.amountOfSeats" /></label><br />
+        <input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" ng-click="saveSeating(selectedSeating)" value="Save" />
+    </form>
+</div>
