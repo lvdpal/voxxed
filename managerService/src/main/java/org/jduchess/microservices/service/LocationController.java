@@ -36,7 +36,6 @@ public class LocationController {
     @CrossOrigin
     @RequestMapping(value = "/deleteLocation/{locationId}", method = RequestMethod.DELETE)
     public boolean deleteLocation(@PathVariable("locationId") Long locationId) {
-        System.out.println("I don't think I'll arrive here...");
         Optional<Location> location = locationRepository.findById(locationId);
         location.ifPresent(loc -> locationRepository.delete(loc));
         return true;
