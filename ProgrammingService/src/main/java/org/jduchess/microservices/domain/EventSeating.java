@@ -8,8 +8,8 @@ public class EventSeating {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @OneToOne
-    private Event event;
+    @Column(name = "event_id")
+    private Long eventId;
 
     private String rank;
     private Integer amountOfSeats;
@@ -22,12 +22,12 @@ public class EventSeating {
         this.id = id;
     }
 
-    public Event getEvent() {
-        return event;
+    public Long getEventId() {
+        return eventId;
     }
 
-    public void setEvent(Event event) {
-        this.event = event;
+    public void setEventId(Long eventId) {
+        this.eventId = eventId;
     }
 
     public String getRank() {
@@ -44,5 +44,15 @@ public class EventSeating {
 
     public void setAmountOfSeats(Integer amountOfSeats) {
         this.amountOfSeats = amountOfSeats;
+    }
+
+    @Override
+    public String toString() {
+        return "EventSeating{" +
+                "id=" + id +
+                ", event=" + eventId +
+                ", rank='" + rank + '\'' +
+                ", amountOfSeats=" + amountOfSeats +
+                '}';
     }
 }

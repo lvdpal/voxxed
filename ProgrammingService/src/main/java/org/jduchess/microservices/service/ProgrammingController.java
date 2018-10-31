@@ -39,6 +39,12 @@ public class ProgrammingController {
     }
 
     @CrossOrigin
+    @RequestMapping(value = "/getEventSeating", method = RequestMethod.GET)
+    public List<EventSeating> getEventSeating() {
+        return (List<EventSeating>) eventSeatingRepository.findAll();
+    }
+
+    @CrossOrigin
     @RequestMapping(value = "/deleteEvent/{eventId}", method = RequestMethod.DELETE)
     public boolean deleteEvent(@PathVariable("eventId") Long eventId) {
         Optional<Event> programmingEvent = eventRepository.findById(eventId);
@@ -49,10 +55,6 @@ public class ProgrammingController {
     @CrossOrigin
     @RequestMapping(value = "/addSeating", method = RequestMethod.POST)
     public EventSeating addSeating(@RequestBody EventSeating seating) {
-        Optional<ProgrammingEvent> event = eventRepository.findById(seating.getProgrammingEvent().getId());
-        if(event.isPresent()) {
-            seating.setProgrammingEvent(event.get());
-        }
         return eventSeatingRepository.save(seating);
     }
 }
