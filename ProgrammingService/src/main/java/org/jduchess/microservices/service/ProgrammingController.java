@@ -1,9 +1,7 @@
 package org.jduchess.microservices.service;
 
-import org.jduchess.microservices.domain.ProgrammingEvent;
+import org.jduchess.microservices.domain.Event;
 import org.jduchess.microservices.domain.EventSeating;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,35 +21,28 @@ public class ProgrammingController {
 
     @CrossOrigin
     @RequestMapping(value = "/addEvent", method = RequestMethod.POST)
-    public ProgrammingEvent addEvent(@RequestBody ProgrammingEvent programmingEvent) {
-        return eventRepository.save(programmingEvent);
+    public Event addEvent(@RequestBody Event event) {
+        return eventRepository.save(event);
     }
 
     @CrossOrigin
     @RequestMapping(value = "/updateEvent", method = RequestMethod.POST)
-    public ProgrammingEvent updateEvent(@RequestBody ProgrammingEvent programmingEvent) {
-        return eventRepository.save(programmingEvent);
+    public Event updateEvent(@RequestBody Event event) {
+        return eventRepository.save(event);
     }
 
 
     @CrossOrigin
     @RequestMapping(value = "/getEvents", method = RequestMethod.GET)
-    public List<ProgrammingEvent> getEvents() {
-        List<ProgrammingEvent> list =  (List<ProgrammingEvent>) eventRepository.findAll();
-        System.out.println("# of events: " + list.size());
-        list.stream().forEach(l-> System.out.println(l.getId() + " " + l.getName() + " " + l.getLocation()));
-        return list;
+    public List<Event> getEvents() {
+        return  (List<Event>) eventRepository.findAll();
     }
 
     @CrossOrigin
     @RequestMapping(value = "/deleteEvent/{eventId}", method = RequestMethod.DELETE)
     public boolean deleteEvent(@PathVariable("eventId") Long eventId) {
-        System.out.println("Delete event " +  eventId);
-        Optional<ProgrammingEvent> programmingEvent = eventRepository.findById(eventId);
-        if (programmingEvent.isPresent()) {
-            eventRepository.delete(programmingEvent.get());
-        }
-        System.out.println("Event Deleted " + getEvents().size());
+        Optional<Event> programmingEvent = eventRepository.findById(eventId);
+        programmingEvent.ifPresent(event -> eventRepository.delete(event));
         return true;
     }
 

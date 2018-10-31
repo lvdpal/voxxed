@@ -3,7 +3,7 @@ package org.jduchess.microservices.domain;
 import javax.persistence.*;
 
 @Entity
-public class ProgrammingEvent {
+public class Event {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
