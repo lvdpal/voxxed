@@ -11,7 +11,9 @@ angular.module('myApp', [
     'myApp.guestlist',
     'myApp.report',
     'myApp.eventManagement',
-    'myApp.eventManagementFactory'
+    'myApp.eventManagementFactory',
+    'myApp.location',
+    'myApp.locationFactory'
 ]).
 config(['$locationProvider', '$routeProvider', '$httpProvider', function($locationProvider, $routeProvider, $httpProvider) {
   $locationProvider.hashPrefix('!');

@@ -1,0 +1,18 @@
+<div ng-controller="locationCtrl">
+	<H1>Voxxed ticketmaster: managing locations</H1>
+
+	<table border='1' ng-show="locations">
+		<tr>
+			<th>Name</th>
+            <th></th>
+		</tr>
+		<tr ng-repeat="location in locations">
+            <td>{{location.name}}</td>
+            <td>
+              <button ng-click="editLocation(location)">Update</button>
+              <button ng-click="deleteLocation(location)">Delete</button>
+            </td>
+		</tr>
+	</table>
+	<button ng-click="addLocation()">Add location</button>
+</div>

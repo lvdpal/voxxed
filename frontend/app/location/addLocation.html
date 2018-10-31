@@ -1,0 +1,9 @@
+<div ng-controller="locationCtrl">
+    <H1>Voxxed ticketmaster: add location</H1>
+
+    <form>
+        <label>Name: <input type="text" ng-model="location.name" /></label><br />
+        <input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" ng-click="createLocation(location)" value="Save" />
+    </form>
+</div>

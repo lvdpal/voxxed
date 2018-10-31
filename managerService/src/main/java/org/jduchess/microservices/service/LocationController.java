@@ -4,6 +4,7 @@ import org.jduchess.microservices.domain.Location;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/location")
@@ -33,8 +34,11 @@ public class LocationController {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/deleteLocation", method = RequestMethod.POST)
-    public void deleteLocation(@RequestBody Location location) {
-        locationRepository.delete(location);
+    @RequestMapping(value = "/deleteLocation/{locationId}", method = RequestMethod.DELETE)
+    public boolean deleteLocation(@PathVariable("locationId") Long locationId) {
+        System.out.println("I don't think I'll arrive here...");
+        Optional<Location> location = locationRepository.findById(locationId);
+        location.ifPresent(loc -> locationRepository.delete(loc));
+        return true;
     }
 }
