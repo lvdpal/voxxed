@@ -9,7 +9,7 @@ public class EventSeating {
     private Long id;
 
     @OneToOne
-    private ProgrammingEvent programmingEvent;
+    private Event event;
 
     private String rank;
     private Integer amountOfSeats;
@@ -22,12 +22,12 @@ public class EventSeating {
         this.id = id;
     }
 
-    public ProgrammingEvent getProgrammingEvent() {
-        return programmingEvent;
+    public Event getEvent() {
+        return event;
     }
 
-    public void setProgrammingEvent(ProgrammingEvent programmingEvent) {
-        this.programmingEvent = programmingEvent;
+    public void setEvent(Event event) {
+        this.event = event;
     }
 
     public String getRank() {

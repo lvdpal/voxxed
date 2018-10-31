@@ -19,6 +19,5 @@
         <module>GuestListService</module>
         <module>ProgrammingService</module>
         <module>marketingService</module>
-        <module>distributionService</module>
     </modules>
 </project>

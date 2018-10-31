@@ -1,7 +1,7 @@
 package org.jduchess.microservices.service;
 
+import org.jduchess.microservices.domain.Event;
 import org.jduchess.microservices.domain.Guest;
-import org.jduchess.microservices.domain.GuestListEvent;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,18 +10,18 @@ import java.util.List;
 @RequestMapping("/guestList")
 public class GuestListController {
 
-    private GuestListEventRepository eventRepository;
+    private EventRepository eventRepository;
     private GuestRepository guestRepository;
 
-    public GuestListController(GuestListEventRepository eventRepository, GuestRepository guestRepository) {
+    public GuestListController(EventRepository eventRepository, GuestRepository guestRepository) {
         this.eventRepository = eventRepository;
         this.guestRepository = guestRepository;
     }
 
     @CrossOrigin
     @RequestMapping(value = "/getEvents", method = RequestMethod.GET)
-    public List<GuestListEvent> getEvents() {
-        return (List<GuestListEvent>)eventRepository.findAll();
+    public List<Event> getEvents() {
+        return (List<Event>)eventRepository.findAll();
     }
 
     @CrossOrigin

@@ -6,13 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class GuestListEvent {
+public class Event {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String name;
+    private String location;
 
-    public GuestListEvent(String name) {
+    public Event(String name) {
         this.name = name;
     }
 
@@ -30,5 +31,13 @@ public class GuestListEvent {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
